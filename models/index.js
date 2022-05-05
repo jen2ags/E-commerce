@@ -10,23 +10,23 @@ Product.belongsTo(Category, {
 });
 
 // Categories have many Products
-Category.hasMany(Product, (
+Category.hasMany(Product, {
   foreignKey: 'category_id'
-));
+});
 
 // Products belongToMany Tags (through ProductTag)
-Product.belongsToMany(ProductTag, (
-  through: tag,
-  as: '',
+Product.belongsToMany(Tag, {
+  through: productTag,
+  as: 'product_tags',
   foreignKey: 'product_id'
-));
+});
 
 // Tags belongToMany Products (through ProductTag)
-Tag.belongsToMany(Product, (
+Tag.belongsToMany(Product, {
   through: productTag,
-  as: '',
+  as: 'product_tags',
   foreignKey: 'tag_id'
-));
+});
 
 module.exports = {
   Product,
