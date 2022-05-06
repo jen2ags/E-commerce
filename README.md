@@ -1,7 +1,7 @@
 # E-commerce
 
 ## Purpose
-THe purpose of the application is to organize data so that the retail store can view and update data while having specific parts of the data linked in different tables.
+The purpose of the application is to organize data so that the retail store can view and update data while having specific parts of the data linked in different tables.
 
 
 ## Built With
